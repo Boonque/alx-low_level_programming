@@ -6,13 +6,11 @@
  */
 int main(void)
 {
-char c = 'a';
+int i;
 
-while (c <= 'z')
+for (i = 0; i < 10; i++)
 {
-if (c != 'q' && c != 'e')
-putchar(c);
-c++;
+printf("%i", i);
 }
 putchar('\n');
 
