@@ -7,13 +7,14 @@
  */
 int main(void)
 {
-char c;
+char hexc;
 int i;
 
 for (i = 0; i < 10; i++)
-{
 putchar(i + '0');
-}
+
+for (hexc = 'a'; hexc < 'g'; hexc++)
+putchar(hexc);
 putchar('\n');
 
 return (0);
