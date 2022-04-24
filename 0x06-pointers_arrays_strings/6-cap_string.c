@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * cap_string - capitalizes all words of a string
- * @s: input string
+ * @s: input string.
  * Return: the pointer to dest.
  */
 
@@ -21,7 +21,7 @@ if (*(s + count) == sep_words[i])
 {
 if ((*(s + (count + 1)) >= 97) && (*(s + (count + 1)) <= 122))
 *(s + (count + 1)) = *(s + (count + 1)) - 32;
-break:
+break;
 }
 }
 count++;
