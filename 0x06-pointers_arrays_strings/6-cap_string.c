@@ -1,22 +1,30 @@
 #include "main.h"
 /**
- * puts2 - prints one char out of 2 of a string.
- * @str: input string
- * Return: no return.
+ * cap_string - capitalizes all words of a string
+ * @s: input string
+ * Return: the pointer to dest.
  */
-void puts2(char *str)
-{
-int count = 0;
 
-while (count >= 0)
+char *cap_string(char *s)
 {
-if (str[count] == '\0')
+int count = 0, i;
+int sep_words[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
+
+if (*(s + count) >= 97 && *(s + count) <= 122)
+*(s + count) = *(s + count) - 32;
+count++;
+while (*(s + count) != '\0')
 {
-_putchar('\n');
-break;
+for (i = 0; i < 13; i++)
+{
+if (*(s + count) == sep_words[i])
+{
+if ((*(s + (count + 1)) >= 97) && (*(s + (count + 1)) <= 122))
+*(s + (count + 1)) = *(s + (count + 1)) - 32;
+break:
 }
-if (count % 2 == 0)
-_putchar(str[count]);
+}
 count++;
 }
+return (s);
 }
